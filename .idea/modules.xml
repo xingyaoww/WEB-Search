@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PageRankModified/.idea/PageRankModified.iml" filepath="$PROJECT_DIR$/../PageRankModified/.idea/PageRankModified.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Scrape/.idea/Scrape.iml" filepath="$PROJECT_DIR$/../Scrape/.idea/Scrape.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WEB-Search.iml" filepath="$PROJECT_DIR$/.idea/WEB-Search.iml" />
+    </modules>
+  </component>
+</project>
