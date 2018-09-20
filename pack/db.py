@@ -3,8 +3,7 @@ import os
 from pack import config
 dbname = config.dbname
 
-
-def db_init(dbname):
+def db_init():
     print(f'* Database Initialization Started - {dbname}')
     global conn
     conn = sqlite3.connect(dbname)
@@ -28,34 +27,11 @@ def db_init(dbname):
 
     # Web Table Stores URL
     cur.execute('''CREATE TABLE IF NOT EXISTS Webs (url TEXT UNIQUE)''')
+    return cur,conn
 
-
-# try:
-#     cur.execute('SELECT * FROM sqlite_sequence')
-#     if cur is not None: print('** Database Exists **')
-#     else:print('** Creating New Tables in db. **')
-# except: print('Brand New DB.')
-# cur.executescript('''
-# CREATE TABLE IF NOT EXISTS Dirs(
-#     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE ,
-#     dir TEXT UNIQUE ,
-#     status INTEGER ,
-#     size INTEGER
-# )''')
-# # status: 0 means directory, 1 means file, -1 means error;
-# # size: represent in byte
-# print('* Database Initialization Completed')
-
-def check_db(cur=cur):
-    tempcur = cur.execute('SELECT * FROM sqlite_sequence ')
-    if tempcur is not None:
-        print('Exist Tables:')
-        for x in tempcur:print(f'  >name:{x[0]} seq:{x[1]}')
-
-        
-def renew_db(cur=cur):
+def renew_db(cur):
     conn.commit()
     cur.close()
     os.remove(dbname)
-    db_init(cur)
+    db_init()
     print('Database Renewed')
