@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b54514f1-0afc-433b-bce1-79b2286fb027" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web-Page-Retrieve.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web-Page-Retrieve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pack/Shell.py" beforeDir="false" afterPath="$PROJECT_DIR$/pack/Shell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pack/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/pack/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pack/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/pack/db.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +18,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Web-Page-Retrieve.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Web-Page-Retrieve.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web-Page-Retrieve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="171">
               <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -44,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shell.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Shell.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pack/Shell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="339">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#898#1293#0" />
@@ -58,13 +55,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Search.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pack/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="95">
               <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#92#736#0" />
+                <element signature="e#1492#1590#0" />
               </folding>
             </state>
           </provider>
@@ -104,6 +112,7 @@
         <option value="$PROJECT_DIR$/Web-Page-Retrieve.py" />
         <option value="$PROJECT_DIR$/pack/Shell.py" />
         <option value="$PROJECT_DIR$/pack/db.py" />
+        <option value="$PROJECT_DIR$/Search.py" />
       </list>
     </option>
   </component>
@@ -259,6 +268,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-1058" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -306,7 +316,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -475,6 +485,8 @@
           <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#92#736#0" />
+            <element signature="e#1492#1590#0" />
           </folding>
         </state>
       </provider>
@@ -628,9 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Retrieved-Pages.sqlite">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FileCatagorize/V3/pack/cmd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -644,6 +653,18 @@
     <entry file="file://$PROJECT_DIR$/11">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web-Page-Retrieve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#685#837#0" />
+            <element signature="e#879#2078#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pack/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -653,34 +674,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pack/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="95">
           <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#92#736#0" />
+            <element signature="e#1492#1590#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Retrieved-Pages.sqlite">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pack/Shell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="339">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#898#1293#0" />
             <element signature="e#1413#1547#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web-Page-Retrieve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#685#837#0" />
-            <element signature="e#879#2078#0" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,6 @@ def db_init():
     # Web Table Stores URL
     cur.execute('''CREATE TABLE IF NOT EXISTS Webs (url TEXT UNIQUE)''')
     return cur,conn
-
 def renew_db(cur):
     conn.commit()
     cur.close()
