@@ -1,10 +1,9 @@
 import sqlite3
 import os
-from pack import config
-dbname = config.dbname
+from pack.config import *
 
-def db_init():
-    print(f'* Database Initialization Started - {dbname}')
+def db_init(dbname=default_dbname):
+    print(f'* Database Initialization Started - {dbname} \n')
     global conn
     conn = sqlite3.connect(dbname)
     global cur
@@ -28,7 +27,7 @@ def db_init():
     # Web Table Stores URL
     cur.execute('''CREATE TABLE IF NOT EXISTS Webs (url TEXT UNIQUE)''')
     return cur,conn
-def renew_db(cur):
+def renew_db(cur,conn,dbname=default_dbname):
     conn.commit()
     cur.close()
     os.remove(dbname)
