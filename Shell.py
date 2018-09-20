@@ -2,7 +2,8 @@ import os
 from pack.db import *
 from pack.config import *
 from pack.WebPageRetrieve import *
-from pack.Search import *
+from pack.search import *
+from pack.pagerank import *
 
 class Shell:
     def __init__(self) -> object:
@@ -21,8 +22,10 @@ class Shell:
 * cd - Change directory
 * rm - Remove File
 * scrape [link] - Start scrape at [Link]
-** Ignore the [link] to visit the Default link
+  Ignore the [link] to visit the Default link
 * search [content] - start search for [content] in db. Regex is supported.
+* pagerank [db-file-name] - Start Pagerank algorithm on select file.
+  Ignore the [db-file-name] to use the previously used db name.
 * renewdb - Remove database & recreate one
 * status - Show db & web status
 * help - For command help
@@ -85,13 +88,21 @@ class Shell:
                 searchFor = cmd.lower().strip()[6:].strip()
                 HTML_search(searchFor, resultName)
 
+            elif cmd.lower().startswith('pagerank'):
+                pagerank_dbname = cmd.lower().strip()[8:].strip()
+                if len(pagerank_dbname)<1: pagerank_dbname = self.scrape_db_name
+                pagerank(pagerank_dbname)
             elif cmd.lower() == 'renewdb':
                 # Problem Unsolved
                 try: renew_db(self.cur,self.conn)
                 except: print('UNKNOWN ERROR. Database is not Connected. Start Scrape First.')
 
             elif cmd.strip().lower() == 'status':
-                print(f' - DbName:{dbname}\n - Start-Link:{self.start_link}')
+                print(f''' 
+    - Scrape DBname: {self.scrape_db_name}
+    - Result Json Name: {self.search_result_name}
+    - Start Link: {self.start_link}
+                ''')
 
             elif cmd.lower().strip() == 'quit':
                 print('*** Shell ENDs ***')

@@ -7,6 +7,7 @@
     <orderEntry type="module" module-name="Scrape" />
     <orderEntry type="module" module-name="PageRankModified" />
     <orderEntry type="module" module-name="FileCatagorize" />
+    <orderEntry type="module" module-name="Web-Server" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
