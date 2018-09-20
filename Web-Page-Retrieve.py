@@ -4,8 +4,27 @@ from urllib.parse import urljoin
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-from pack.db import *
-from pack.Shell import *
+
+def db_init(cur):
+    # Page Table
+    cur.execute('''CREATE TABLE IF NOT EXISTS Pages(
+        id INTEGER PRIMARY KEY, 
+        url TEXT UNIQUE, 
+        html TEXT,
+        error INTEGER, 
+        old_rank REAL, 
+        new_rank REAL
+        )''')
+
+    # Intermediate Table-Links
+    cur.execute('''CREATE TABLE IF NOT EXISTS Links(
+        from_id INTEGER, 
+        to_id INTEGER
+        )''')
+
+    # Web Table Stores URL
+    cur.execute('''CREATE TABLE IF NOT EXISTS Webs (url TEXT UNIQUE)''')
+
 def SSLerrorsIgnore():
     # Ignore SSL certificate errors
     ctx = ssl.create_default_context()
@@ -46,9 +65,10 @@ def initialization(start_link,cur):
 
 
 ctx = SSLerrorsIgnore()
-db_init()
-shell = Shell()
-start_link = shell.run()
+conn = sqlite3.connect('Retrieved-Pages.sqlite')
+cur = conn.cursor()
+db_init(cur)
+start_link = input('URL:')
 if len(start_link)<1: start_link = 'https://news.twt.edu.cn'
 initialization(start_link, cur)
 
