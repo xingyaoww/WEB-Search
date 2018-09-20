@@ -54,7 +54,15 @@ def initialization(start_link,cur):
             cur.execute('''INSERT OR IGNORE INTO Pages (url, html, new_rank) 
                         VALUES ( ?, NULL, 1.0 )''', (start_link,))
             conn.commit()
+
+    # Get the current webs - netloc
+    cur.execute('''SELECT url FROM Webs''')
+    global webs
+    webs = list()
+    for row in cur: webs.append(str(row[0]))
+    print(webs)
     # Initializing Complete - start_link is stored in db.
+
 
 ctx = SSLerrorsIgnore()
 conn = sqlite3.connect('Retrieved-Pages.sqlite')
@@ -64,11 +72,7 @@ start_link = input('URL:')
 if len(start_link)<1: start_link = 'https://news.twt.edu.cn'
 initialization(start_link, cur)
 
-# Get the current webs - netloc
-cur.execute('''SELECT url FROM Webs''')
-webs = list()
-for row in cur: webs.append(str(row[0]))
-print(webs)
+
 
 # Start Looping for more sites
 iterationTimes = 0
@@ -142,11 +146,15 @@ while True:
     # Retrieve all of the anchor tags -- Find next pages
     tags = soup('a')
     count = 0
+    # print(f'***{tags}***')
     for tag in tags:
+        print(f'  * WORKING ON {tag}')
         href = tag.get('href', None)
         if href is None: continue
+
         # Resolve relative references like href="/contact"
         up = urlparse(href)
+
         if len(up.scheme) < 1: href = urljoin(url, href) # No scheme 'HTTP://' is detected
         ipos = href.find('#')
         if ipos > 1: href = href[:ipos]

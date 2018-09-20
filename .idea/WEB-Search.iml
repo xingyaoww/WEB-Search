@@ -6,6 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Scrape" />
     <orderEntry type="module" module-name="PageRankModified" />
+    <orderEntry type="module" module-name="FileCatagorize" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
